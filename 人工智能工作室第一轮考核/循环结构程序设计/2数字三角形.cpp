@@ -2,16 +2,14 @@
 using namespace std;
 int main(){
     int n;
-    int tmp = 1;
+    int cnt = 1;
     while(cin>>n){
-        for(int i=0;i<n;i++){ 
-            int cnt = 0;
-            for(int j=tmp;j<=tmp+i;j++){
-                cout<<" "<<j;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<=i;j++){
+                cout<<setw(4)<<cnt;
                 cnt++;
             }
             cout<<endl;
-            tmp += cnt;
         }
     }
 }
